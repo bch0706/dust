@@ -13,7 +13,7 @@ st.markdown("선택한 자치구의 미세먼지(PM10)와 초미세먼지(PM2.5)
 @st.cache_data
 def load_data():
     # 파일명은 실제 업로드할 파일명과 동일해야 합니다.
-    df = pd.read_csv("서울시 시간별 (초)미세먼지_2025년.csv")
+    df = pd.read_csv("dust.csv")
     
     # '일시' 컬럼을 datetime 객체로 변환
     df['일시'] = pd.to_datetime(df['일시'])
