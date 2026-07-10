@@ -22,7 +22,7 @@ def load_data():
     df = df.sort_values(by='일시')
     
     # 결측치(NaN) 처리: 시간의 흐름에 따라 이전 시간의 값으로 채움
-    df = df.fillna(method='ffill') 
+    df = df.ffill()
     return df
 
 # 데이터 불러오기
